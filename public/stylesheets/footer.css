@@ -1,0 +1,53 @@
+#footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    min-height: 80px;
+    background-color: #d4ffb3;
+    outline: 3px solid #7dd638;
+    overflow: hidden;
+}
+
+#footer-content {
+    position: relative;
+    width: 70%;
+    margin-left: auto;      /* Centrera */
+    margin-right: auto;     /*          */
+    padding: 30px 0px 30px 0px;
+}
+
+#footer-content ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+#footer-content li {
+    font-weight: bold;
+    display: inline-block;
+    padding-right: 40px;
+    padding-left: 30px;
+    border-right: 1px solid green;
+}
+
+#footer li:first-child {
+    padding-left: 0;
+    padding-right: 30px;
+}
+
+#footer li:last-child {
+    padding-right: 0;
+    padding-left: 30px;
+    border-right: none;
+}
+
+.footer-info {
+    font-style: italic;
+    color: inherit;
+    font-size: 13px;
+}
+
+#footer-content a {
+    color: green;
+}

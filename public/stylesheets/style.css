@@ -1,0 +1,76 @@
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    padding: 0 0 160px 0;
+    margin: 0;
+    background-color: #fff;
+    font-family: 'Lato', sans-serif;
+    min-height: 100%;
+}
+
+#container {
+    z-index: -1;
+    width: 70%;
+    margin-left: auto;      /* Centrera */
+    margin-right: auto;     /*          */
+    padding-top: 100px;
+}
+
+.headline {
+    width: 100%;
+    text-align: center;
+    font-size: 36px;
+    color: #333;
+    font-weight: 900;
+    margin-bottom: 40px;
+}
+
+.register-form, .login-form {
+    text-align: center;
+}
+
+.form-input, .form-submit {
+    padding: 10px;
+    width: 200px;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.form-submit {
+    width: 224px;
+    margin-bottom: 0;
+    background-color: #a3f564;
+    border: 1px solid #7fcf42;
+}
+
+.subtext, .subtext a:link, .subtext a:visited, .subtext a:active {
+    text-decoration: none;
+    text-align: center;
+}
+
+.subtext a:hover {
+    text-decoration: underline;
+}
+
+.home-button {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+
+    width: 200px;
+    border: 2px solid #252525;
+    border-radius: 7px;
+
+    padding: 10px 20px 10px 20px;
+
+    /* Drop shadow */
+    -webkit-box-shadow: -3px 3px 0px 0px rgba(94,94,94,1);
+    -moz-box-shadow: -3px 3px 0px 0px rgba(94,94,94,1);
+    box-shadow: -3px 3px 0px 0px rgba(94,94,94,1);
+
+    /* For links */
+    text-decoration: none;
+}

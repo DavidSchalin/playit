@@ -1,0 +1,66 @@
+<div class="headline">
+    Hej {{ username }}!
+</div>
+<div id="dashboard-content">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/dashboard.css">
+<div class="dashboard-style" id="dashboard-mina-spel">
+    <table id="myGames">
+        <thead>
+        <tr>
+            <th class="dashboard-th">
+                <h1>Mina Spel</h1>
+            </th>
+
+        </tr>
+        </thead>
+        <tbody>
+        {{#each games}}
+                <tr>
+                    <td>
+                        <a href={{this.gameId}}>{{this.gameName}}</a>
+                    </td>
+                </tr>
+        {{/each}}
+        </tbody>
+    </table>
+</div>
+
+<div class="dashboard-style" id="dashboard-nytt-spel">
+        <table>
+            <thead>
+            <tr>
+                <th class="dashboard-th" colspan="3">
+                    <h1>Nytt spel</h1>
+                </th>
+            </tr>
+            <tr>
+                <th colspan="3" class="skapa-nytt-spel">
+                    <h2><a href="/">Skapa nytt spel</a></h2>
+                </th>
+            </tr>
+            </thead>
+        </table>
+    </div>
+    <div class="dashboard-style" id="dashboard-konto">
+        <table>
+            <thead>
+            <tr>
+                <th class="dashboard-th" colspan="2">
+                    <h1>Konto</h1>
+                </th>
+            </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><b>Användarnamn:</b></td>
+                    <td>{{username}}</td>
+                </tr>
+                <tr>
+                    <td><b>Lösenord:</b></td>
+                    <!-- Placeholder ref finns inget för att ändra lösenord än -->
+                    <td><a href="/users/psw">Ändra lösenord</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

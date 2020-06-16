@@ -1,0 +1,51 @@
+<div class="headline">
+    Pekleken
+</div>
+
+<form action="/users/save" method="post">
+    <div class="game-info">
+        <div class="info-box">
+            <h1>Förberedelser</h1>
+            <ul id="preps-list">
+                <li>
+                    <span class="span-prep">Bestäm vem som ska läsa upp frågorna. Detta är ofta en och samma person.
+                    </span>
+                </li>
+                <li>
+                    <span class="span-prep">Placera er i en cirkel, vid ett bord, på golvet eller i en soffgrupp eller på något annat vis så att alla kan se varandra.
+                    </span>
+                </li>
+                <li>
+                    <span class="span-prep">Gör upp om eventuella regler. Exempelvis kan man spela att man måste dricka lika många klunkar som antal pekningar man får mot sig.
+                    </span>
+                </li>
+            </ul>
+            <div class="edit-preps" onclick="setPreps()">Ändra förberedelser</div>
+        </div>
+
+
+        <div class="info-box">
+            <h1>Spelregler</h1>
+            <ol id="rules-list">
+                <li>
+                    <span class="span-rule">En av spelarna säger ett påstående, ex. "Vem i rummet är mest sannolik att hamna i fängelse?"</span>
+                    </span>
+                </li>
+                <li>
+                    <span class="span-rule">Efter lite betänketid skall varje medspelare (alla på samma gång) peka mot den person som den tycker påståendet stämmer bäst på.</span>
+                </li>
+            </ol>
+            <div class="edit-rules" onclick="setRules()">Ändra regler</div>
+            {{#if loggedIn}}
+                <input type="text" name="gameName" placeholder="Namnge detta spel" class="game-name" required>
+                <button type="submit" class="save-rules-btn">Spara alla ändringar</button>
+                <p class="comment">Du kan hitta dina sparade spel under sidan <a href="/users/dashboard">"Mitt konto"</a>.</p>
+            {{else}}
+                <div class="must-be-logged-in">
+                    Du måste vara inloggad för att kunna spara dina ändringar.<br><br>
+                    <a href="/users/login">Logga in</a> &nbsp;&nbsp;|&nbsp;&nbsp; <a href="/users/register">Skapa ett konto</a>
+                </div>
+            {{/if}}
+        </div>
+    </div>
+</form>

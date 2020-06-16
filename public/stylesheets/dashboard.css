@@ -1,0 +1,52 @@
+#dashboard-content{
+    border-top: 1px dotted #ccc;
+    padding-top: 20px;
+    background: white;
+    /* box-shadow: 0px 1px 1px #999; */
+    text-align: center;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+}
+
+table{
+    table-layout: fixed;
+    width: 320px;
+    border: none;
+}
+
+td,th{
+    padding: 10px;
+    border: 1px #7dd638 dotted;
+}
+
+th h1 {
+    font-size: 20px;
+}
+
+th h2 {
+    color: green;
+    font-size: 16px;
+}
+
+td span {
+    font-size: 12px;
+    margin-right: 5px;
+}
+
+td a:hover {
+    text-decoration: underline;
+}
+
+.dashboard-th {
+    border: none;
+}
+
+.skapa-nytt-spel {
+    border: 1px #7dd638 dotted;
+    background-color: none;
+}
+
+.skapa-nytt-spel a {
+    color: green;
+}

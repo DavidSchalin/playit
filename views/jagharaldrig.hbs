@@ -1,0 +1,51 @@
+<div class="headline">
+    Jag har aldrig
+</div>
+
+<form action="/users/save" method="post">
+    <div class="game-info">
+        <div class="info-box">
+            <h1>Förberedelser</h1>
+            <ul id="preps-list">
+                <li>
+                    <span class="span-prep">Bestäm vad som ska göras då ett påstående stämmer, enligt originalreglerna ska detta vara dricka en klunk öl/cider/vin eller ta en shot.
+                    </span>
+                </li>
+                <li>
+                    <span class="span-prep">Placera er i en cirkel, vid ett bord, på golvet eller i en soffgrupp eller på något annat vis så att spelets turordning är tydlig.
+                    </span>
+                </li>
+                <li>
+                    <span class="span-prep">Gör också upp om personen som kom med ett påstående själv måste dricka om det är sant. Spelet spelas normalt med att denna personen också måste dricka, men behöver han/hon inte göra det blir påståendet oftast mer vågade.
+                    </span>
+                </li>
+            </ul>
+            <div class="edit-preps" onclick="setPreps()">Ändra förberedelser</div>
+        </div>
+
+        <div class="info-box">
+            <h1>Spelregler</h1>
+            <ol id="rules-list">
+                <li>
+                    <span class="span-rule">En av spelarna börjar med att säga ”Jag har aldrig…” följt av något, t.ex. ”Jag har aldrig varit i Malmö.”
+                    </span>
+                </li>
+                <li>
+                    <span class="span-rule">De andra medspelarna som då varit i Malmö måste dricka en klunk ur sitt glas. Sen går turen över till nästa spelare som skall komma med ett nytt påstående.
+                    </span>
+                </li>
+            </ol>
+            <div class="edit-rules" onclick="setRules()">Ändra regler</div>
+            {{#if loggedIn}}
+                <input type="text" name="gameName" placeholder="Namnge detta spel" class="game-name" required>
+                <button type="submit" class="save-rules-btn">Spara som nytt spel</button>
+                <p class="comment">Du kan hitta dina sparade spel under sidan <a href="/users/dashboard">"Mitt konto"</a>.</p>
+            {{else}}
+                <div class="must-be-logged-in">
+                    Du måste vara inloggad för att kunna spara dina ändringar.<br><br>
+                    <a href="/users/login">Logga in</a> &nbsp;&nbsp;|&nbsp;&nbsp; <a href="/users/register">Skapa ett konto</a>
+                </div>
+            {{/if}}
+        </div>
+    </div>
+</form>

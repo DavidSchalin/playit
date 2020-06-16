@@ -1,0 +1,36 @@
+.vertical-center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.vertical-center-rotate {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%) rotate(-5deg);
+}
+
+.float-none {
+    float: none;
+}
+
+.errorMsg {
+    display: inline-block;
+    padding: 10px 23px 10px 23px;
+    background-color: #ff7171;
+    border-left: 4px solid red;
+    color: #691c1c;
+    margin-bottom: 15px;
+}
+
+.clearedPara {
+    padding: 0;
+}
+
+.ignore-list-style {
+    list-style-type: none;
+}

@@ -1,0 +1,18 @@
+<div class="headline">
+    Skapa ett konto
+</div>
+<div class="register-form">
+
+    {{#if error_msg}}
+        <p class="errorMsg">{{ error_msg }}</p>
+    {{/if}}
+    <form action="/users/register" method="post">
+        <input type="text" name="email" placeholder="E-mail" class="form-input" required>
+        <br>
+        <input type="text" name="username" placeholder="Användarnamn" class="form-input" required>
+        <br>
+        <input type="password" name="password" placeholder="Lösenord" class="form-input" required>
+        <br>
+        <button type="submit" class="form-submit">Skapa konto</button>
+    </form>
+</div>

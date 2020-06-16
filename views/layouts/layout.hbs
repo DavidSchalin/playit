@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Playit - Skapa egna lekar</title>
+        <script src="/javascripts/scriptUtils.js"></script>
+        <link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
+        <link rel="stylesheet" type="text/css" href="/stylesheets/utils.css">
+        <link rel="stylesheet" type="text/css" href="/stylesheets/header.css">
+        <link rel="stylesheet" type="text/css" href="/stylesheets/gameItems.css">
+        <link rel="stylesheet" type="text/css" href="/stylesheets/footer.css">
+        <link href="https://fonts.googleapis.com/css2?family=Sarpanch:wght@900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div id="header">
+            <div id="header-container">
+                <div class="logo vertical-center-rotate"><a href="/">playit!</a></div>
+                {{#if loggedIn}}
+                    <div class="logout vertical-center">
+                        <a href="/users/logout">Logga ut</a>
+                    </div>
+                    <div class="dashboard vertical-center">
+                        <a href="/users/dashboard">Mitt konto</a>
+                    </div>
+                {{else}}
+                    <div class="register vertical-center">
+                        <a href="/users/register">Skapa ett konto</a>
+                    </div>
+                    <div class="login vertical-center">
+                        <a href="/users/login">Logga in</a>
+                    </div>
+                {{/if}}
+            </div>
+        </div>
+
+        <!-- CONTAINER -->
+        <div id="container">
+            {{{ body }}}
+        </div>
+
+        <div id="footer">
+            <div id="footer-content">
+                <ul>
+                    <li><a href="/">Hem</a></li>
+                    <li><a href="/about">Om Playit</a></li>
+                    {{#if loggedIn}}
+                        <li><a href="/users/dashboard">Mitt konto</a></li>
+                    {{/if}}
+                </ul>
+                <br>
+                <div class="footer-info">Playit!&nbsp;&nbsp; Skapat av Gabriel Christensson och David Schalin</div>
+            </div>
+        </div>
+    </body>
+</html>
